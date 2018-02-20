@@ -26,28 +26,28 @@
   <style>
     @font-face {
       font-family:'sans';
-      src:url('/fonts/IRANSans/IRANSansWeb_Light.woff') format('woff'),
-      url('/fonts/IRANSans/IRANSansWeb_Light.eot') format('eot'),
-      url('/fonts/IRANSans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/IRANSans/IRANSansWeb_Light.ttf') format('truetype');
+      src:url('../../public/fonts/IRANSans/IRANSansWeb_Light.woff') format('woff'),
+      url('../../public/fonts/IRANSans/IRANSansWeb_Light.eot') format('eot'),
+      url('../../public/fonts/IRANSans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/IRANSans/IRANSansWeb_Light.ttf') format('truetype');
       font-weight:normal;
       font-style:normal;
       font-variant:normal;
     }
     @font-face {
       font-family:'sansMedium';
-      src:url('/fonts/IRANSansMedium/IRANSansWeb_Medium.woff') format('woff'),
-      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.eot') format('eot'),
-      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.ttf') format('truetype');
+      src:url('../../public/fonts/IRANSansMedium/IRANSansWeb_Medium.woff') format('woff'),
+      url('../../public/fonts/IRANSansMedium/IRANSansWeb_Medium.eot') format('eot'),
+      url('../../public/fonts/IRANSansMedium/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/IRANSansMedium/IRANSansWeb_Medium.ttf') format('truetype');
       font-weight:bold;
     }
     @font-face {
       font-family:'sansBold';
-      src:url('/fonts/IRANSansBold/IRANSansWeb_Bold.woff') format('woff'),
-      url('/fonts/IRANSansBold/IRANSansWeb_Bold.eot') format('eot'),
-      url('/fonts/IRANSansBold/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/IRANSansBold/IRANSansWeb_Bold.ttf') format('truetype');
+      src:url('../../public/fonts/IRANSansBold/IRANSansWeb_Bold.woff') format('woff'),
+      url('../../public/fonts/IRANSansBold/IRANSansWeb_Bold.eot') format('eot'),
+      url('../../public/fonts/IRANSansBold/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/IRANSansBold/IRANSansWeb_Bold.ttf') format('truetype');
       font-weight:bold;
     }
     body {

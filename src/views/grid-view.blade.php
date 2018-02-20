@@ -83,13 +83,9 @@
   </div>
 </div>
 <script>
-
-    var getImageUrl = '{{route('panel.files.getImage')}}';
-    var storeImageUrl = '{{route('panel.files.storeImage')}}';
-
     $('.seo-link').on('click', function() {
         var item = $(this).parent().parent().parent().parent().prev().data('id');
-        // var url = window.location.protocol + "//" + window.location.host + "/" + getImageUrl;
+         var url = window.location.protocol + "//" + window.location.host + "/" + getImageUrl;
         $.ajax({
             url: getImageUrl,
             type: 'GET',
@@ -106,7 +102,7 @@
         var title = $('#title').val();
         var alt = $('#alt').val();
         var item = $('#filepath').val();
-        // var url = window.location.protocol + "//" + window.location.host + "/" + storeImageUrl;
+         var url = window.location.protocol + "//" + window.location.host + "/" + storeImageUrl;
         $.ajax({
             url: storeImageUrl,
             type: 'POST',
@@ -117,5 +113,4 @@
         });
         $('#seo').modal('hide');
     })
-
 </script>

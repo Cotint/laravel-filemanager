@@ -23,6 +23,8 @@ class LaravelFilemanagerServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(__DIR__.'/lang', 'laravel-filemanager');
 
+        $this->loadMigrationsFrom(__DIR__.'/migrations/2017_10_09_055144_create_files_table.php');
+
         $this->loadViewsFrom(__DIR__.'/views', 'laravel-filemanager');
 
         $this->publishes([
