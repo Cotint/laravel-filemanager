@@ -23,21 +23,93 @@
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/mfb.css') }}">
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/dropzone.min.css') }}">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.css">
+  <style>
+    @font-face {
+      font-family:'sans';
+      src:url('/fonts/IRANSans/IRANSansWeb_Light.woff') format('woff'),
+      url('/fonts/IRANSans/IRANSansWeb_Light.eot') format('eot'),
+      url('/fonts/IRANSans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/IRANSans/IRANSansWeb_Light.ttf') format('truetype');
+      font-weight:normal;
+      font-style:normal;
+      font-variant:normal;
+    }
+    @font-face {
+      font-family:'sansMedium';
+      src:url('/fonts/IRANSansMedium/IRANSansWeb_Medium.woff') format('woff'),
+      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.eot') format('eot'),
+      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/IRANSansMedium/IRANSansWeb_Medium.ttf') format('truetype');
+      font-weight:bold;
+    }
+    @font-face {
+      font-family:'sansBold';
+      src:url('/fonts/IRANSansBold/IRANSansWeb_Bold.woff') format('woff'),
+      url('/fonts/IRANSansBold/IRANSansWeb_Bold.eot') format('eot'),
+      url('/fonts/IRANSansBold/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/IRANSansBold/IRANSansWeb_Bold.ttf') format('truetype');
+      font-weight:bold;
+    }
+    body {
+      font-family: sans !important;
+    }
+    .rtl {
+      direction: rtl;
+    }
+    .ltr {
+      direction: ltr;
+    }
+    .float-right {
+      float: right;
+    }
+    .txt-r {
+      text-align: right;
+    }
+    .over-hide {
+      overflow-x: hidden;
+    }
+    .btn {
+      float: left;
+    }
+    .modal-title {
+      margin-right: 25px;
+    }
+    .modal-title {
+      direction: rtl;
+    }
+    .folder-item {
+      color: #777 !important;
+      font-size: 14px;
+    }
+    td {
+      text-align: center;
+    }
+    th {
+      text-align: center;
+    }
+    .actions {
+      text-align: center !important;
+    }
+    .btn-xs {
+      font-size: 12px;
+      height: 22px;
+    }
+  </style>
 </head>
 <body>
   <div class="container-fluid" id="wrapper">
     <div class="panel panel-primary hidden-xs">
-      <div class="panel-heading">
+      <div class="panel-heading rtl">
         <h1 class="panel-title">{{ trans('laravel-filemanager::lfm.title-panel') }}</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2 hidden-xs">
+      <div class="col-md-2 col-xs-2 col-sm-2 hidden-xs float-right">
         <div id="tree"></div>
       </div>
 
-      <div class="col-sm-10 col-xs-12" id="main">
-        <nav class="navbar navbar-default" id="nav">
+      <div class="col-md-10 col-xs-10 col-sm-10" id="main">
+        <nav class="navbar navbar-default rtl" id="nav">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-buttons">
               <span class="sr-only">Toggle navigation</span>
@@ -89,7 +161,7 @@
 
         <div id="alerts"></div>
 
-        <div id="content"></div>
+        <div id="content" class="rtl"></div>
       </div>
 
       <ul id="fab">
@@ -199,7 +271,7 @@
       init: function() {
         var _this = this; // For the closure
         this.on('success', function(file, response) {
-          if (response == 'OK') {
+          if (true) {
             refreshFoldersAndItems('OK');
           } else {
             this.defaultOptions.error(file, response.join('\n'));
