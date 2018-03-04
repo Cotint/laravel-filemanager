@@ -18,7 +18,7 @@ return [
     'menu-crop'         => 'برش',
 
     'title-page'        => 'مدیریت فایل',
-    'title-panel'       => 'مدیریت فایل لاراول',
+    'title-panel'       => 'مدیریت فایل کوتینت',
     'title-upload'      => 'آپلود کردن فایل',
     'title-view'        => 'مشاهده فایل',
     'title-root'        => 'فایل ها',
