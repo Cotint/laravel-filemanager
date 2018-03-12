@@ -1,6 +1,6 @@
 @if((sizeof($files) > 0) || (sizeof($directories) > 0))
 
-<input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
+<input type="text" id="searchInput" class="form-control input-search-file" onkeyup="searchFunction()" placeholder="جستجو ..." title="Type in a name">
 
     <div class="row" id="myRow">
 
