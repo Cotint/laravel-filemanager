@@ -124,8 +124,8 @@ input:focus{
 
 .input-search-file{
   position: absolute;
-  left: 50%;
-  top: 3%;
+  left: 5%;
+  top: 1%;
   width: 19%;
   box-shadow: none;
   border-radius: 0;
