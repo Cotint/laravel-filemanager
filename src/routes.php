@@ -92,9 +92,15 @@ Route::group(compact('middleware', 'prefix', 'as', 'namespace'), function () {
     ]);
 
     // seo
-    Route::get('/seo', [
+    Route::post('/seo', [
         'uses' => 'SeoController@saveSeo',
         'as' => 'saveSeo',
+    ]);
+
+    // seo
+    Route::post('/getimage', [
+        'uses' => 'SeoController@getImage',
+        'as' => 'getImage',
     ]);
 
     // Route::get('/demo', 'DemoController@index');

@@ -93,6 +93,14 @@ input:focus{
   box-shadow: none !important;
   border: 1px solid #319863 !important;
 }
+.check-select{
+  font-size: 18px !important;
+  color: #fff;
+  position: absolute !important;
+  top: -5px !important;
+  background-color: #1d936b;
+  left: -12px !important;
+}
 .mfb-component__button--main{
   background-color: #77ba97 !important;
 }

@@ -99,7 +99,7 @@
 <script>
     var base = window.location.protocol + "//" + window.location.host;
     var src = base + localStorage.getItem('filesrc');
-    $("div[data-id='" + src +"']").addClass("selec");
+    $("div[data-id='" + src +"']").append( "<i class=\"fa fa-check check-select\"></i>" )
     $("div[data-id='" + src +"']").parent().addClass("selecp");
     el2 = $(".selecp");
     $(el2).insertBefore($(".c0"));
