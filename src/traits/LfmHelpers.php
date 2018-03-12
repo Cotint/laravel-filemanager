@@ -576,7 +576,7 @@ trait LfmHelpers
         }
 
         uasort($arr_items, function ($a, $b) use ($key_to_sort) {
-            return strcmp($a->{$key_to_sort}, $b->{$key_to_sort});
+            return strcmp($b->{$key_to_sort}, $a->{$key_to_sort});
         });
 
         return $arr_items;

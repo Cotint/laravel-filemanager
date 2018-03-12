@@ -91,6 +91,12 @@ Route::group(compact('middleware', 'prefix', 'as', 'namespace'), function () {
         'as' => 'getDelete',
     ]);
 
+    // seo
+    Route::get('/seo', [
+        'uses' => 'SeoController@saveSeo',
+        'as' => 'saveSeo',
+    ]);
+
     // Route::get('/demo', 'DemoController@index');
 });
 

@@ -94,6 +94,13 @@
       font-size: 12px;
       height: 22px;
     }
+    .selec {
+      border: 0.1em solid #319863;
+    }
+
+    #searchInput {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>

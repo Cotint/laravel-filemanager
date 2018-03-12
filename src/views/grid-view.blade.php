@@ -1,21 +1,35 @@
 @if((sizeof($files) > 0) || (sizeof($directories) > 0))
 
-<div class="row">
+<input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
 
-  @foreach($items as $item)
-  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 img-row">
+    <div class="row" id="myRow">
+
+  @foreach($items as $key => $item)
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 img-row c{{$key}}">
     <?php $item_name = $item->name; ?>
     <?php $thumb_src = $item->thumb; ?>
     <?php $item_path = $item->is_file ? $item->url : $item->path; ?>
 
+      <?php
+      $ur = \Request::fullUrl();
+      $ur = explode('/', $ur);
+      $ur = $ur[4];
+      $ur = explode('&', $ur);
+      $urflag = array_search('type=images', $ur);
+      ?>
+
     <div class="square clickable {{ $item->is_file ? 'file-item' : 'folder-item' }}" data-id="{{ $item_path }}"
            @if($item->is_file && $thumb_src) onclick="useFile('{{ $item_path }}', '{{ $item->updated }}')"
            @elseif($item->is_file) onclick="download('{{ $item_name }}')" @endif >
-      @if($thumb_src)
-      <img src="{{ $thumb_src }}">
-      @else
-      <i class="fa {{ $item->icon }} fa-5x"></i>
-      @endif
+        @if($thumb_src)
+            @if($urflag and $item->is_file)
+                <a href="javascript:fileView('{{ $item_path }}', '{{ $item->updated }}')"><img src="{{ $thumb_src }}"></a>
+            @else
+                <img src="{{ $thumb_src }}">
+            @endif
+        @else
+            <i class="fa {{ $item->icon }} fa-5x"></i>
+        @endif
     </div>
 
     <div class="caption text-center">
@@ -83,6 +97,12 @@
   </div>
 </div>
 <script>
+    var base = window.location.protocol + "//" + window.location.host;
+    var src = base + localStorage.getItem('filesrc');
+    $("div[data-id='" + src +"']").addClass("selec");
+    $("div[data-id='" + src +"']").parent().addClass("selecp");
+    el2 = $(".selecp");
+    $(el2).insertBefore($(".c0"));
     $('.seo-link').on('click', function() {
         var item = $(this).parent().parent().parent().parent().prev().data('id');
          var url = window.location.protocol + "//" + window.location.host + "/" + getImageUrl;
@@ -113,4 +133,21 @@
         });
         $('#seo').modal('hide');
     })
+
+    function searchFunction() {
+        var input, filter, row, div, a, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        row = document.getElementById("myRow");
+        div = row.getElementsByClassName("img-row");
+        for (i = 0; i < div.length; i++) {
+            a = div[i].getElementsByClassName("item_name")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                div[i].style.display = "";
+            } else {
+                div[i].style.display = "none";
+
+            }
+        }
+    }
 </script>
