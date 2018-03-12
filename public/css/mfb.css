@@ -77,6 +77,43 @@
  * Styles placed here should NOT care about placement in the screen,
  * options chosen by the user or state of the button.
  */
+.panel-primary>.panel-heading{
+  background-color: #319863 !important;
+  border-color: #319863 !important;
+}
+.btn-primary{
+  background-color: #319863 !important;
+  border-color: #319863 !important;
+}
+.btn-info{
+  background-color: #77ba97 !important;
+  border-color: #77ba97 !important;
+}
+input:focus{
+  box-shadow: none !important;
+  border: 1px solid #319863 !important;
+}
+.mfb-component__button--main{
+  background-color: #77ba97 !important;
+}
+.mfb-component__button--child{
+  background-color: #77ba97 !important;
+}
+.panel-primary{
+  border-color: #319863 !important;
+}
+#content a{
+  color: #319863;
+  text-align: right;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9{
+  float: right;
+}
+.list-unstyled{
+  float: right !important;
+  direction: rtl !important;
+}
+
 .mfb-component--tl, .mfb-component--tr, .mfb-component--bl, .mfb-component--br {
   box-sizing: border-box;
   margin: 25px;
