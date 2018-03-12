@@ -42,6 +42,14 @@ class LaravelFilemanagerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Handlers/LfmConfigHandler.php' => base_path('app/Handlers/LfmConfigHandler.php'),
         ], 'lfm_handler');
+
+        $this->publishes([
+            __DIR__.'/migrations' => database_path('migrations'),
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/models/File.php' => base_path('app/Models/File.php'),
+        ], 'model');
     }
 
     /**
