@@ -114,6 +114,15 @@ input:focus{
   direction: rtl !important;
 }
 
+.input-search-file{
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  width: 19%;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .mfb-component--tl, .mfb-component--tr, .mfb-component--bl, .mfb-component--br {
   box-sizing: border-box;
   margin: 25px;
