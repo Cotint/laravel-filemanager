@@ -95,7 +95,7 @@
       height: 22px;
     }
     .selec {
-      border: 0.1em solid #319863;
+      border: 0.07em solid #319863;
     }
 
     #searchInput {
