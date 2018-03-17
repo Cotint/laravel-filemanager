@@ -101,6 +101,16 @@
     #searchInput {
       margin-bottom: 10px;
     }
+
+    .square img {
+      padding: 5px !important;
+      position: absolute !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      margin: 0 auto !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
   </style>
 </head>
 <body>

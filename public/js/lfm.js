@@ -9,7 +9,7 @@
       localStorage.setItem('target_preview', $(this).data('preview'));
       var src  = $('#' + localStorage.getItem('target_preview')).attr('src');
       localStorage.setItem('filesrc', src);
-      window.open(route_prefix + '?type=' + type, 'FileManager', 'width=900,height=600');
+      window.open(route_prefix + '?type=' + type, 'FileManager', 'width=1100,height=600');
       window.SetUrl = function (url, file_path) {
           //set the value of the desired input to image url
           var target_input = $('#' + localStorage.getItem('target_input'));
