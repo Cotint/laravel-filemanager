@@ -98,7 +98,7 @@ Route::group(compact('middleware', 'prefix', 'as', 'namespace'), function () {
     ]);
 
     // seo
-    Route::post('/getimage', [
+    Route::get('/getimage', [
         'uses' => 'SeoController@getImage',
         'as' => 'getImage',
     ]);
