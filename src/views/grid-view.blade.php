@@ -106,9 +106,8 @@
     $(el2).insertBefore($(".c0"));
     $('.seo-link').on('click', function() {
         var item = $(this).parent().parent().parent().parent().prev().data('id');
-         var url = window.location.protocol + "//" + window.location.host + "/" + getImageUrl;
         $.ajax({
-            url: getImageUrl,
+            url: 'laravel-filemanager/getimage',
             type: 'GET',
             data: {'item': item},
             success: function (data) {
@@ -123,9 +122,8 @@
         var title = $('#title').val();
         var alt = $('#alt').val();
         var item = $('#filepath').val();
-         var url = window.location.protocol + "//" + window.location.host + "/" + storeImageUrl;
         $.ajax({
-            url: storeImageUrl,
+            url: 'laravel-filemanager/seo',
             type: 'POST',
             data: {'title':title, 'alt':alt, 'item': item,'_token':'{{ csrf_token() }}',
             },
@@ -133,7 +131,7 @@
             }
         });
         $('#seo').modal('hide');
-    })
+    });
 
     function searchFunction() {
         var input, filter, row, div, a, i;

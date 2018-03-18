@@ -4,7 +4,7 @@ namespace Unisharp\Laravelfilemanager\controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
+use Unisharp\Laravelfilemanager\models\File;
 use Illuminate\Http\Request;
 use Unisharp\Laravelfilemanager\Services\FileService;
 
