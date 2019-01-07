@@ -72,7 +72,7 @@ class UploadController extends LfmController
 //                Image::make($file->getRealPath())
 //                    ->orientate() //Apply orientation from exif data
 //                    ->save($new_file_path);
-
+		chmod($file->path(), 0755);
                 File::move($file->getRealPath(), $new_file_path);
 
                 // Generate a thumbnail
@@ -81,6 +81,7 @@ class UploadController extends LfmController
                 }
             } else {
                 // Create (move) the file
+		chmod($file->path(), 0755);
                 File::move($file->getRealPath(), $new_file_path);
             }
             chmod($new_file_path, config('lfm.create_file_mode', 0644));
